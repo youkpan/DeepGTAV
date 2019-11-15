@@ -1,7 +1,7 @@
 #include <map>
 #include "LaneRewarder.h"
 #include "../lib/tinyxml2.h"
-
+#include <iostream>  
 LaneRewarder::LaneRewarder(const char* pathsfile) {
 	while (nodes.size() == 0) {
 		if (PATHFIND::_0xF7B79A50B905A30D(-8192.0f, 8192.0f, -8192.0f, 8192.0f)) {
@@ -218,7 +218,7 @@ void LaneRewarder::populateNodes(const char* pathsfile){
 			node1 = nodes.at(node1.id);
 			node2 = nodes.at(node2.id);
 		}
-		catch (const std::out_of_range) {
+		catch ( const   std::out_of_range) {
 			//Empty on purpose
 		}
 

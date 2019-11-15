@@ -20,6 +20,8 @@ class Scenario {
 private:
 	static char* weatherList[14];
 	static char* vehicleList[3];
+	int offset = 0;
+	int offset_counter = 0;
 
 	Vehicle vehicle = NULL;
 	Player player = NULL;

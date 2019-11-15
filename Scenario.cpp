@@ -577,16 +577,28 @@ void Scenario::setPedsList(){
 }
 
 
+
 void Scenario::setThrottle(){
-	d["throttle"] = getFloatValue(vehicle, 0x92C);
+	offset = 112;
+	d["throttle"] =  getFloatValue(vehicle, 0x92C+ offset);
+	/*if (offset_counter % 100 == 0) {
+		d["throttle"] = offset;
+	}
+	offset_counter++;
+	if (offset_counter % 100 == 99) {
+		offset+=16;
+		if (offset > 200) {
+			offset = 0;
+		}
+	}*/
 }
 
 void Scenario::setBrake(){
-	d["brake"] = getFloatValue(vehicle, 0x930);
+	d["brake"] = getFloatValue(vehicle, 0x930+ offset);
 }
 
 void Scenario::setSteering(){
-	d["steering"] = -getFloatValue(vehicle, 0x924) / 0.6981317008;
+	d["steering"] = -getFloatValue(vehicle, 0x924+ offset) / 0.6981317008;
 }
 
 void Scenario::setSpeed(){
