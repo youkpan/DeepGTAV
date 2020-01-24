@@ -185,7 +185,7 @@ void Scenario::buildScenario() {
 	if (strcmp(_vehicle, "packer") == 0) CAM::ATTACH_CAM_TO_ENTITY(camera, vehicle, 0, 2.35, 2.7, TRUE);
 	else if (strcmp(_vehicle, "voltic") == 0) CAM::ATTACH_CAM_TO_ENTITY(camera, vehicle, 0, 0.5, 1.6, TRUE);
 	else CAM::ATTACH_CAM_TO_ENTITY(camera, vehicle, 0, 0.5, 1.8, TRUE);
-	CAM::SET_CAM_FOV(camera, 72);
+	CAM::SET_CAM_FOV(camera, 60);
 	CAM::SET_CAM_ACTIVE(camera, TRUE);
 	CAM::SET_CAM_ROT(camera, rotation.x, rotation.y, rotation.z, 1);
 	CAM::SET_CAM_INHERIT_ROLL_VEHICLE(camera, TRUE);
